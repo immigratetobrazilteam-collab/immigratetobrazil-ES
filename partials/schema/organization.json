@@ -1,0 +1,18 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Immigrate to Esp\u00edrito Santo",
+  "description": "Esp\u00edrito Santo is a southeastern Brazilian state with capital Vit\u00f3ria, known for its coastal ports, beaches, and diverse economy including steel production and agriculture. It features mountainous regions, ethnic influences from Italian, German, and Arab communities, and cultural elements like moqueca capixaba cuisine and forr\u00f3 music.",
+  "keywords": "espirito santo brazil, southeast immigration, espirito santo visa, brazil beaches, vitoria residency, coastal living brazil, espirito santo tourism",
+  "url": "https://immigratetobrazil.com/es/",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "Esp\u00edrito Santo",
+    "addressCountry": "BR"
+  },
+  "sameAs": [
+    "https://en.wikipedia.org/wiki/Esp%C3%ADrito_Santo",
+    "https://www.es.gov.br/",
+    "https://www.britannica.com/place/Espirito-Santo-state-Brazil"
+  ]
+}
