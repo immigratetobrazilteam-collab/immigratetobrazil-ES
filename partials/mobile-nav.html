@@ -1,52 +1,15 @@
-<nav class="mobile-nav md:hidden" aria-label="Mobile navigation">
-    <button aria-expanded="false" aria-controls="mobile-menu" class="w-full px-4 py-2 bg-[#8B4513] text-white rounded flex justify-between items-center">Menu <i class="fas fa-chevron-down"></i></button>
-    <ul id="mobile-menu" class="hidden flex flex-col bg-white shadow-md rounded-md mt-1 overflow-auto max-h-[80vh]">
-        <li><a href="/" class="block px-4 py-2 hover:bg-[#228B22]/10">Home</a></li>
-        <li>
-            <button class="w-full text-left px-4 py-2 hover:bg-[#228B22]/10 flex justify-between items-center" aria-expanded="false" aria-controls="services-sub">Services <i class="fas fa-chevron-down"></i></button>
-            <ul id="services-sub" class="hidden pl-4">
-                <li class="font-bold py-1">Travel Services</li>
-                
-                <li class="font-bold py-1 mt-2">Brazilian Visas</li>
-                <li><a href="/visas/artistic-visa" class="block py-2 pl-4 hover:bg-[#228B22]/10" title="Artistic Visa">Artistic Visa</a></li>
-                <li class="font-bold py-1 mt-2">Residency Permits</li>
-                
-                <li class="font-bold py-1 mt-2">Citizenship & Naturalisation</li>
-                
-                <li class="font-bold py-1 mt-2">Other Services</li>
-                
-            </ul>
-        </li>
-        <li>
-            <button class="w-full text-left px-4 py-2 hover:bg-[#228B22]/10 flex justify-between items-center" aria-expanded="false" aria-controls="explore-sub">Explore Espírito Santo <i class="fas fa-chevron-down"></i></button>
-            <ul id="explore-sub" class="hidden pl-4">
-                <li><a href="/explore/penha-convent" class="block py-2 pl-4 hover:bg-[#228B22]/10" title="Penha Convent">Penha Convent</a></li><li><a href="/explore/anchieta-palace" class="block py-2 pl-4 hover:bg-[#228B22]/10" title="Anchieta Palace">Anchieta Palace</a></li><li><a href="/explore/pico-da-bandeira" class="block py-2 pl-4 hover:bg-[#228B22]/10" title="Pico da Bandeira">Pico da Bandeira</a></li><li><a href="/explore/coastal-plains" class="block py-2 pl-4 hover:bg-[#228B22]/10" title="Coastal plains">Coastal plains</a></li><li><a href="/explore/lakes" class="block py-2 pl-4 hover:bg-[#228B22]/10" title="lakes">lakes</a></li><li><a href="/explore/mountainous-forests" class="block py-2 pl-4 hover:bg-[#228B22]/10" title="mountainous forests">mountainous forests</a></li><li><a href="/explore/mangroves" class="block py-2 pl-4 hover:bg-[#228B22]/10" title="mangroves">mangroves</a></li><li><a href="/explore/volcanic-islands-of-trindade-and-martim-vaz" class="block py-2 pl-4 hover:bg-[#228B22]/10" title="volcanic islands of Trindade and Martim Vaz">volcanic islands of Trindade and Martim Vaz</a></li><li><a href="/explore/sand-dunes-in-itaúnas" class="block py-2 pl-4 hover:bg-[#228B22]/10" title="sand dunes in Itaúnas">sand dunes in Itaúnas</a></li><li><a href="/explore/juparanã-lagoon" class="block py-2 pl-4 hover:bg-[#228B22]/10" title="Juparanã Lagoon">Juparanã Lagoon</a></li><li><a href="/explore/serra-do-caparaó-range" class="block py-2 pl-4 hover:bg-[#228B22]/10" title="Serra do Caparaó range">Serra do Caparaó range</a></li><li><a href="/explore/caparaó-national-park" class="block py-2 pl-4 hover:bg-[#228B22]/10" title="Caparaó National Park">Caparaó National Park</a></li><li><a href="/explore/pedra-azul-national-park" class="block py-2 pl-4 hover:bg-[#228B22]/10" title="Pedra Azul National Park">Pedra Azul National Park</a></li><li><a href="/explore/pontões-capixabas-natural-monument" class="block py-2 pl-4 hover:bg-[#228B22]/10" title="Pontões Capixabas Natural Monument">Pontões Capixabas Natural Monument</a></li><li><a href="/explore/moqueca-capixaba" class="block py-2 pl-4 hover:bg-[#228B22]/10" title="Moqueca capixaba">Moqueca capixaba</a></li><li><a href="/explore/italian-pasta" class="block py-2 pl-4 hover:bg-[#228B22]/10" title="Italian pasta">Italian pasta</a></li><li><a href="/explore/cheeses-such-as-mozzarella" class="block py-2 pl-4 hover:bg-[#228B22]/10" title="cheeses such as mozzarella">cheeses such as mozzarella</a></li>
-            </ul>
-        </li>
-        <li><a href="/contact" class="block px-4 py-2 hover:bg-[#228B22]/10">Contact</a></li>
-        <li><a href="/faq" class="block px-4 py-2 hover:bg-[#228B22]/10">FAQ</a></li>
-        <li><a href="/blog" class="block px-4 py-2 hover:bg-[#228B22]/10">Blog</a></li>
-        <li><a href="/about" class="block px-4 py-2 hover:bg-[#228B22]/10">About</a></li>
-    </ul>
-    <script>
-        const menuBtn = document.querySelector('.mobile-nav button');
-        const menu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => {
-            const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
-            menuBtn.setAttribute('aria-expanded', !expanded);
-            menu.classList.toggle('hidden');
-            menuBtn.querySelector('i').classList.toggle('fa-chevron-down');
-            menuBtn.querySelector('i').classList.toggle('fa-chevron-up');
-        });
-        document.querySelectorAll('.mobile-nav li button').forEach(subBtn => {
-            subBtn.addEventListener('click', () => {
-                const expanded = subBtn.getAttribute('aria-expanded') === 'true';
-                subBtn.setAttribute('aria-expanded', !expanded);
-                const subMenu = document.getElementById(subBtn.getAttribute('aria-controls'));
-                subMenu.classList.toggle('hidden');
-                subBtn.querySelector('i').classList.toggle('fa-chevron-down');
-                subBtn.querySelector('i').classList.toggle('fa-chevron-up');
-            });
-        });
-    </script>
+<nav class="mobile-nav hidden" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+    <div class="mobile-nav-content">
+        <button class="mobile-nav-close" aria-label="Close menu">&times;</button>
+        <ul class="mobile-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="mobile-dropdown">
+                <button class="mobile-dropdown-toggle">Services ▼</button>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="services/guided-trips.html">Guided Trips</a></li>\n                    <li><a href="services/naturalisation.html">Naturalisation</a></li>\n                    <li><a href="services/other-services.html">Other Services</a></li>\n                    <li><a href="services/residencies.html">Residencies</a></li>\n                    <li><a href="services/visas.html">Visas</a></li>\n                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
 </nav>
